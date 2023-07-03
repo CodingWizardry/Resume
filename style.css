@@ -9,12 +9,14 @@ body {
 #body-header {
     height: 65vh;
     opacity: 0.8;
-    background-image: url(image/macbook_mouse.jpg);
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     padding-top: 1.2rem;
 }
+
+
 
 /* Horizontal Lists */
 
@@ -30,7 +32,6 @@ body {
     font-weight: 100;
     font-size: 0.9rem;
 }
-
 
 .horizontal-list li a {
     color: white;
@@ -50,6 +51,8 @@ body {
     text-align: center;
 }
 
+
+
 /* Name and Social Icons*/
 
 #name-social-container {
@@ -64,34 +67,26 @@ body {
     margin-bottom: 0.5rem;
 }
 
-
-.social-icons li{
+.social-icons li a i {
+    padding: 10px;
+    font-size: 1rem;
     border-radius: 50%;
 }
-.social-icons li:hover{
+
+.social-icons li a i:hover {
     box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
 }
 
-.social-icons li a i:hover{
-    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
-}
-
-.social-icons li a img{
-    width: 1rem;
-    padding: 8px;
-}
 
 
 /*Section Classes*/
 
 section {
-    width: 100%;
-    /*height: 75vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
-
 
 section:nth-child(2n) {
     background-color: #9e9b9b29;
@@ -117,48 +112,13 @@ section:nth-child(2n + 1) {
 
 
 
-/* Common Margin Classes */
-
-.mb75px {
-    margin-bottom: 75px;
-}
-
-
-
-/*common color classes */
-
-.text-highlight {
-    color: #2857a4;
-    font-weight: 600;
-
-}
-
-
-
-/* setting background-color */
-
-.mb-blue {
-    background-color: #2857a4;
-}
-
-.mb-orange {
-    background-color: #ec4d1c;
-}
-
-.mb-teal {
-    background-color: #0b8176;
-}
-
-.mb-light-purple {
-    background-color: #93738c;
-}
-
 /*About Section*/
 
 #about {
     height: auto;
     width: 100%;
     position: relative;
+    margin-bottom: 30px;
 }
 
 #my-image {
@@ -176,18 +136,17 @@ section:nth-child(2n + 1) {
     box-shadow: 1px 1px 10px 2px lightgrey;
 }
 
-.about-para {
+#about-para {
     padding: 10px;
     width: 70%;
-    height: 100%;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    /*color: grey;*/
+    color: grey;
     line-height: 28px;
-    font-weight: 100;
     font-size: 1.1rem;
+    margin: auto;
 }
+
+
 
 /*Skills Section*/
 
@@ -221,6 +180,8 @@ section:nth-child(2n + 1) {
     margin-left: 10px;
     vertical-align: middle;
 }
+
+
 
 /* Work Experience */
 
@@ -326,6 +287,56 @@ section:nth-child(2n + 1) {
 .text-align-justify {
     text-align: justify;
 }
+
+
+
+/* Portfolio Section */
+
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.portfolio-image-container {
+    max-width: 300px;
+    overflow: hidden;
+    margin: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-details {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: #80808078;
+    color: white;
+}
+
+
+
 /* Contact Form */
 
 #contact {
@@ -439,6 +450,58 @@ button:focus {
     outline: none;
 }
 
+
+
+/* Common Margin Classes */
+
+.m0 {
+    margin: 0;
+}
+
+.mb75px {
+    margin-bottom: 75px;
+}
+
+.mb50px {
+    margin-bottom: 50px;
+}
+
+
+
+/*common color classes */
+
+.text-highlight {
+    color: #2857a4;
+    font-weight: 600;
+
+}
+
+
+
+/* setting background-color */
+
+.m-blue {
+    color: #2857a4;
+}
+
+.mb-blue {
+    background-color: #2857a4;
+}
+
+.mb-orange {
+    background-color: #ec4d1c;
+}
+
+.mb-teal {
+    background-color: #0b8176;
+}
+
+.mb-light-purple {
+    background-color: #93738c;
+}
+
+
+
 /*Percentage Classes */
 
 .eighty-five-percent {
@@ -451,7 +514,7 @@ button:focus {
     width: 80%;
 }
 
-.seventy-five-percent {
+.fifty-percent {
     height: inherit;
-    width: 75%;
+    width: 50%;
 }
